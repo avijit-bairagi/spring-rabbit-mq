@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  rabbit-mq:
+    image: rabbitmq:3-management
+    container_name: my-rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./volumes/data:/var/opt/rabbit-mq/data
